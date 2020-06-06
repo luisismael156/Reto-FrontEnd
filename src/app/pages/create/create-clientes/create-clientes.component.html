@@ -1,0 +1,67 @@
+<h1>Agregar un Cliente</h1>
+<hr />
+
+<div class="row text-right">
+  <div class="col">
+    <button class="btn btn-danger" routerLink="/clientes">
+      <i class="fa fa-arrow-left"></i>
+      Regresar
+    </button>
+  </div>
+</div>
+
+<div class="row animated fadeIn faster">
+  <div class="col">
+    <form (ngSubmit)="guardar(f)" #f="ngForm">
+      <div class="form-group">
+        <label>Nombre</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Nombre del héroe"
+          [(ngModel)]="cliente.nombre"
+          name="nombre"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label>Apellido</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="cliente.apellido"
+          name="apellido"
+          placeholder="Apellido"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label>Edad</label>
+        <input type="number"
+         class="form-control"
+         [(ngModel)]="cliente.edad"
+
+          name="edad"
+          required />
+      </div>
+      <div class="form-group">
+        <label>Fecha de Nacimiento</label>
+        <input type="date"
+         class="form-control" 
+         [(ngModel)]="cliente.FechaNacimiento"
+        name="Fecha de Nacimiento"
+        required />
+      </div>
+
+      <hr />
+      <div class="form-group text-center">
+        <button type="submit" class="btn btn-primary w-25">
+          <i class="fa fa-save"></i>
+          Guardar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
